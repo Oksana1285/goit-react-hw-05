@@ -1,0 +1,13 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  gap: 20px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(28, 27, 27, 0.019);
+  box-shadow: 0 4px 10px -2px rgba(19, 18, 18, 0.3);
+}
+
+.active {
+  color: #161fc2;
+}

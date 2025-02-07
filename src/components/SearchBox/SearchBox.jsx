@@ -1,23 +1,33 @@
-import { useId } from 'react';
 import css from './SearchBox.module.css';
 
-const SearchBox = ({ value, onSearch }) => {
-  const searchId = useId();
+const SearchBox = ({ handleChange, handleSearchMovie, query }) => {
+  const onChangeHandle = event => {
+    handleChange(event.target.value);
+  };
+
+  const onSubmitHandle = event => {
+    event.preventDefault();
+    handleSearchMovie({ query: event.target.elements.query.value });
+  };
 
   return (
-    <div className={css.searchContainer}>
-      <label className={css.searchLabel} htmlFor={searchId}>
-        Find contacts by name
-      </label>
+    <form className={css.searchForm} onSubmit={onSubmitHandle}>
       <input
-        onChange={e => onSearch(e.target.value)}
         className={css.searchInput}
-        id={searchId}
+        onChange={onChangeHandle}
+        name="query"
+        value={query}
         type="search"
-        inputMode="search"
-        value={value}
+        required
       />
-    </div>
+      <button
+        className={css.searchButton}
+        type="submit"
+        aria-label="search button"
+      >
+        Search
+      </button>
+    </form>
   );
 };
 

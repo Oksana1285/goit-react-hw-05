@@ -1,0 +1,48 @@
+.cardAvatar {
+  width: 150px;
+  height: 350px;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.hr {
+  width: 100%;
+  margin-top: 4px;
+  color: #2831d5;
+  background-color: #1e25b9;
+  height: 2px;
+  border: none;
+  box-shadow: 0 2px 5px rgba(13, 13, 13, 0.3);
+}
+
+.cardContent {
+  text-align: center;
+}
+
+.cardTitle {
+  display: -webkit-box;
+  margin-top: 10px;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  font-weight: 700;
+  overflow: hidden;
+
+  /* -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  /* line-clamp: 3; */
+  text-overflow: ellipsis;
+}
+
+.cardDate {
+  margin-bottom: 15px;
+  color: rgb(118, 108, 108);
+  width: 250px;
+  display: -webkit-box;
+  overflow: hidden;
+
+  /* -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3; */
+  text-overflow: ellipsis;
+}

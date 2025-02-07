@@ -1,9 +1,20 @@
-.searchContainer {
+.searchForm {
   margin-bottom: 40px;
+  text-align: center;
 }
-.searchLabel {
-  display: block;
+
+.searchButton {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 10px;
+  color: #0d138e;
+  font-size: 20px;
+  font-weight: 400px;
 }
 
 .searchInput {

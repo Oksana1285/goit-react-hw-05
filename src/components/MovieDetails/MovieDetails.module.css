@@ -1,0 +1,41 @@
+.detailsWrap {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 10px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.329);
+}
+
+.detailsImage {
+  border-radius: 8px;
+  flex-grow: 1;
+  width: 25%;
+}
+
+.details {
+  padding: 16px;
+  border: 1px solid #646cff;
+  border-radius: 8px;
+  flex-grow: 1;
+}
+
+.detailsTitle {
+  font-size: xx-large;
+  font-weight: 700;
+}
+
+.detailsScore {
+  display: block;
+}
+
+.detailsOverview {
+  font-weight: 700;
+}
+
+.detailsGenres {
+  font-weight: 700;
+}
+
+.detailsText {
+  font-weight: 400;
+}

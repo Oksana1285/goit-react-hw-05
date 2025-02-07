@@ -1,0 +1,37 @@
+.reviewCardTitle {
+  text-align: center;
+  margin-block: 20px;
+  color: #1a23cf;
+}
+
+.reviewCardContentWrap {
+  display: flex;
+  gap: 40px;
+  flex-direction: row-reverse;
+}
+
+.reviewCardImage {
+  border-radius: 10px;
+  width: 20%;
+}
+
+.reviewCardContent {
+  padding: 16px;
+  border: 1px solid #1a23cf;
+  border-radius: 8px;
+  flex-grow: 1;
+}
+
+.reviewCardRating {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.reviewCardRatingValue {
+  margin-left: 10px;
+  color: #1a23cf;
+}
+
+.reviewCardDescription {
+  color: rgb(169, 159, 159);
+}

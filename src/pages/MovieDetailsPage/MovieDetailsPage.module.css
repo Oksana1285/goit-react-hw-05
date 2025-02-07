@@ -1,0 +1,17 @@
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-top: 40px;
+  text-transform: uppercase;
+}
+
+.btnGoBack {
+  margin-bottom: 20px;
+}
+
+.additionalText {
+  margin-top: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #1c24c2;
+}
