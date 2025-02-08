@@ -41,10 +41,6 @@ const MoviesPage = () => {
     handleSearchMovie1();
   }, [queryValue]);
 
-  const handleChange = searchValue => {
-    setSearch(searchValue);
-  };
-
   const handleSearchMovie = query => {
     setSearchParams(query);
   };
@@ -53,9 +49,8 @@ const MoviesPage = () => {
     <section className="container">
       <Header title={'Search movies'} />
       <SearchBox
-        handleChange={handleChange}
+        handleChange={query => setSearch({ search: query })}
         handleSearchMovie={handleSearchMovie}
-        query={search}
       />
       {movies && <MovieList data={movies} />}
       {movies && movies.length === 0 && (

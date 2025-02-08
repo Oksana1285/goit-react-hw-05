@@ -1,4 +1,4 @@
-import { IMG_URL, DEFAULT_IMG_URL } from '../../services/api';
+import { urlImg, defaultImg } from '../../services/api';
 import css from './MovieDetails.module.css';
 
 const MovieDetails = ({
@@ -10,7 +10,7 @@ const MovieDetails = ({
     <div className={css.detailsWrap}>
       <img
         className={css.detailsImage}
-        src={backdrop_path ? IMG_URL + backdrop_path : DEFAULT_IMG_URL}
+        src={backdrop_path ? urlImg + backdrop_path : defaultImg}
         alt={title}
       />
       <div className={css.details}>

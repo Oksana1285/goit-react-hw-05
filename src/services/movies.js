@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { API_PATH } from './api';
+import { TOKEN } from './api';
 
 const ACCESS_KEY =
   'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MzMzOTEzYTJkZTIyOGFiMjA3ZDdmOTk4Mzk1MWVjOSIsIm5iZiI6MTczODYwOTUyMi4wMzYsInN1YiI6IjY3YTExMzcxNmI5ZjY2NmE5OTAyZThlZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0Nr1DhMg3LfLZbeS4x0Qrd7woQliC2_uHtJqYMyoiK8';
@@ -11,12 +11,12 @@ axios.defaults.headers = {
 };
 
 export const getMovieTrend = async () => {
-  const response = await axios.get(API_PATH.trend, {});
+  const response = await axios.get(TOKEN.trend, {});
   return response.data;
 };
 
 export const getMovieSearch = async (query, page = 1) => {
-  const response = await axios.get(API_PATH.search, {
+  const response = await axios.get(TOKEN.search, {
     params: {
       query,
       page,
@@ -27,16 +27,16 @@ export const getMovieSearch = async (query, page = 1) => {
 };
 
 export const getMovieById = async id => {
-  const response = await axios.get(API_PATH.movie + id + '?');
+  const response = await axios.get(TOKEN.movie + id + '?');
   return response.data;
 };
 
 export const getMovieReviews = async id => {
-  const response = await axios.get(API_PATH.movie + id + '/reviews?');
+  const response = await axios.get(TOKEN.movie + id + '/reviews?');
   return response.data;
 };
 
 export const getMovieCredits = async id => {
-  const response = await axios.get(API_PATH.movie + id + '/credits?');
+  const response = await axios.get(TOKEN.movie + id + '/credits?');
   return response.data;
 };

@@ -1,6 +1,6 @@
 import css from './ReviewsCard.module.css';
 
-import { IMG_URL, DEFAULT_IMG_URL } from '../../services/api';
+import { urlImg, defaultImg } from '../../services/api';
 
 const ReviewCard = ({ reviews }) => {
   return (
@@ -11,8 +11,8 @@ const ReviewCard = ({ reviews }) => {
             avatar_path?.startsWith('/http') || avatar_path?.startsWith('http')
               ? avatar_path
               : avatar_path
-              ? IMG_URL + avatar_path
-              : DEFAULT_IMG_URL;
+              ? urlImg + avatar_path
+              : defaultImg;
 
           return (
             <article key={id}>

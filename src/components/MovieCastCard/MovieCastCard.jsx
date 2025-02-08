@@ -1,4 +1,4 @@
-import { IMG_URL, DEFAULT_IMG_URL } from '../../services/api';
+import { urlImg, defaultImg } from '../../services/api';
 
 import css from './MovieCastCard.module.css';
 
@@ -7,7 +7,7 @@ const MovieCastCard = ({ data: { profile_path, name, characte } }) => {
     <>
       <img
         className={css.castCardImage}
-        src={profile_path ? IMG_URL + profile_path : DEFAULT_IMG_URL}
+        src={profile_path ? urlImg + profile_path : defaultImg}
         alt={'avatar ' + name}
         loading="lazy"
       />
