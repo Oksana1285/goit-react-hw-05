@@ -11,7 +11,7 @@ import NotFoundMessage from '../NotFoundMesagge/NotFoundMesagge';
 
 const MovieCast = () => {
   const { movieId } = useParams();
-  const [movieCast, setMovieCast] = useState(null);
+  const [movieCast, setMovieCast] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -23,8 +23,8 @@ const MovieCast = () => {
       setError(false);
 
       try {
-        const { movieCast } = await getMovieCredits(movieId);
-        setMovieCast(movieCast);
+        const { cast } = await getMovieCredits(movieId);
+        setMovieCast(cast);
       } catch (error) {
         setError(true);
       } finally {
@@ -45,7 +45,7 @@ const MovieCast = () => {
             </li>
           );
         })}
-      {movieCast && movieCast.length === 0 && (
+      {!loading && movieCast.length === 0 && (
         <NotFoundMessage text={'Sorry, there are no cast for this movie'} />
       )}
 

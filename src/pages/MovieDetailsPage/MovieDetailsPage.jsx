@@ -81,7 +81,7 @@
 
 // export default MovieDetailsPage;
 
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, useRef } from 'react';
 import { Suspense } from 'react';
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 
@@ -94,6 +94,7 @@ import NavigationSub from '../../components/NavigationSub/NavigationSub';
 import Header from '../../components/Header/Header';
 
 import { getMovieById } from '../../services/movies';
+import { defaultMovieLink } from '../../services/api';
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
@@ -101,7 +102,7 @@ const MovieDetailsPage = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const location = useLocation();
-  const backLink = useMemo(() => location.state?.from ?? '/movies', [location]);
+  const backLink = useRef(location.state);
 
   useEffect(() => {
     if (!movieId) return;
@@ -137,7 +138,7 @@ const MovieDetailsPage = () => {
     <section className="container">
       <Header title="Details info" />
 
-      <Link to={backLink}>
+      <Link to={backLink.current || defaultMovieLink}>
         <button className={css.btnGoBack} type="button" aria-label="Go back">
           Go Back
         </button>

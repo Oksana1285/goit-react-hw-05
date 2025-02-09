@@ -10,4 +10,4 @@ export const defaultImg =
 export const defaultTitle = 'Title';
 export const defaultLink = '/';
 export const defaultDate = '0000-00-00';
-export const defaultMovieLinl = '/movies';
+export const defaultMovieLink = '/movies';
